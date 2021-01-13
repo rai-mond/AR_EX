@@ -81,10 +81,9 @@ function renderPlaces(places) {
         let longitude = place.location.lng;
 
         // add place name
-        let text = document.createElement('a-link');
+        let text = document.createElement('a-entity');
         text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-        text.setAttribute('title', place.name);
-        text.setAttribute('href', 'http://www.example.com/');
+        text.setAttribute('gltf-model', 'https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf');
         text.setAttribute('scale', '15 15 15');
 
         text.addEventListener('loaded', () => {
